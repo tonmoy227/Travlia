@@ -15,7 +15,7 @@ Last change:    00/00/00
 
 // lenis-smooth-scroll
 	const lenis = new Lenis({
-		duration: .8, 
+		duration: 1.2, 
 		easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), 
 		direction: 'vertical', 
 		smooth: true, 
@@ -83,6 +83,14 @@ Last change:    00/00/00
 	// Background Image
 	$('[data-background]').each(function() {
 		$(this).css('background-image', 'url('+ $(this).attr('data-background') + ')');
+	});
+	$( function() {
+		$( "#datepicker" ).datepicker({
+			format: 'dd-mm-yyyy' 
+		});
+	} );
+	$(document).ready(function() {
+		$('.tv-select select').niceSelect();
 	});
 	gsap.registerPlugin(ScrollTrigger);
 	

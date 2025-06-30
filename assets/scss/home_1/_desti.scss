@@ -1,0 +1,43 @@
+.tv-desti-sec {
+	z-index: 1;
+	.tv-desti-bg {
+		top: 0;
+		left: 0;
+		z-index: -1;
+		width: 100%;
+		height: 100%;
+		max-height: 440px;
+	}
+}
+.tv-desti-content {
+	gap: 28px;
+	@media #{$lg,$md,$sm,$xs,$xxs} {
+		flex-wrap: wrap;
+	}
+}
+.tv-desti-item {
+	max-width: 235px;
+	.item-img {
+		margin-bottom: 22px;
+		span {
+			left: 0;
+			right: 0;
+			bottom: -14px;
+			position: absolute;
+		}
+	}
+	.inner-img {
+		width: 100%;
+		height: 280px;
+		max-width: 235px;
+		overflow: hidden;
+		border-radius: 200px;
+	}
+	.item-text {
+		h3 {
+			font-size: 28px;
+			font-weight: 700;
+			color: var(--tv-black);
+		}
+	}
+}

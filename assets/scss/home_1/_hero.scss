@@ -1,0 +1,247 @@
+.tv-hero1-sec {
+	padding-top: 105px;
+	@media #{$md,$sm,$xs,$xxs} {
+		padding-top: 85px;
+	}
+	@media #{$xxs} {
+		padding-top: 65px;
+	}
+	.tv-hero1-bg {
+		left: 0;
+		bottom: 0;
+		width: 100%;
+		max-height: 530px;
+	}
+}
+.tv-hero1-content {
+	margin: 0px 50px;
+	border-radius: 30px;
+	padding: 220px 0px 85px;
+	@media #{$xxl,$xl,$lg,$md,$sm,$xs,$xxs} {
+		margin: 0;
+		border-radius: 0;
+	}
+	@media #{$md,$sm,$xs,$xxs} {
+		padding-top: 150px;
+	}
+	@media #{$xxs} {
+		padding-bottom: 70px;
+	}
+	.tv-hr1-img {
+		top: 0;
+		right: 0;
+		max-width: 955px;
+		position: absolute;
+		@media #{$xl} {
+			max-width: 750px;
+		}
+		@media #{$lg,$md,$sm,$xs,$xxs} {
+			width: 100%;
+			max-width: 50%;
+		}
+		&:before {
+			top: 0;
+			left: -1px;
+			width: 66px;
+			content: '';
+			height: 100%;
+			position: absolute;
+			background-size: cover;
+			background-repeat: no-repeat;
+			background-image: url(../img/hero/shape1.png);
+		}
+	}
+}
+.tv-hero1-text {
+	z-index: 2;
+	max-width: 960px;
+	position: relative;
+	@media #{$xxl} {
+		max-width: 900px;
+	}
+	@media #{$xl,$lg} {
+		max-width: 700px;
+	}
+	@media #{$md,$sm,$xs,$xxs} {
+		max-width: 100%;
+	}
+	.hr1-text-wrap {
+		max-width: 660px;
+		@media #{$md,$sm,$xs,$xxs} {
+			width: 100%;
+			max-width: 100%;
+		}
+	}
+	.hero-slug {
+		line-height: 1;
+		font-size: 40px;
+		color: var(--tv-base-c1);
+		font-family: var(--tv-just);
+		@media #{$sm,$xs} {
+			font-size: 35px;
+		}
+	}
+	.hero_title {
+		color: #fff;
+		font-size: 75px;
+		font-weight: 800;
+		line-height: 1.133;
+		margin-bottom: 22px;
+		@media #{$sm,$xs} {
+			font-size: 60px;
+		}
+		@media #{$xxs} {
+			font-size: 50px;
+		}
+		span {
+			color: var(--tv-base-c1);
+		}
+	}
+	p {
+		color: #fff;
+		font-size: 20px;
+		max-width: 575px;
+		line-height: 1.4;
+		padding-bottom: 60px;
+	}
+}
+.tv-login-social {
+	gap: 40px;
+	button {
+		color: #fff;
+		padding: 0;
+		border: none;
+		font-size: 16px;
+		font-weight: 700;
+		background-color: transparent;
+		i {
+			margin-right: 5px;
+		}
+	}
+	.social-icon {
+		a {
+			color: #fff;
+			font-size: 16px;
+			margin-right: 15px;
+			&:hover {
+				color: var(--tv-base-c1);
+			}
+		}
+	}
+}
+.tv-hr1-img-text {
+	right: 0;
+	bottom: 0;
+	z-index: 2;
+	gap: 15px;
+	position: absolute;
+	@media #{$lg,$md,$sm,$xs,$xxs} {
+		margin-top: 50px;
+		position: relative;
+	}
+	@media #{$xs,$xxs} {
+		flex-wrap: wrap;
+	}
+	.item-img {
+		width: 106px;
+		height: 106px;
+		overflow: hidden;
+		border-radius: 100%;
+	}
+	.item-text {
+		max-width: 330px;
+		h3 {
+			color: #fff;
+			font-size: 55px;
+			font-weight: 800;
+			padding-bottom: 15px;
+			@media #{$xs} {
+				font-size: 45px;
+			}
+			@media #{$xxs} {
+				font-size: 35px;
+				padding-bottom: 5px;
+			}
+		}
+		p {
+			color: #fff;
+			padding-bottom: 15px;
+		}
+		a {
+			width: 70px;
+			height: 70px;
+			border-radius: 100%;
+			background-color: #fff;
+		}
+	}
+}
+.tv-booking-option {
+	z-index: 1;
+	background-color: #fff;
+	padding: 40px 60px 30px;
+	border-top-right-radius: 200px;
+	border-bottom-right-radius: 200px;
+	@media #{$xl,$lg,$md,$sm,$xs,$xxs} {
+		border-radius: 20px;
+		padding: 40px 20px 30px;
+	}
+	@media #{$sm,$xs,$xxs} {
+		gap: 20px 40px;
+		flex-wrap: wrap;
+	}
+	&::before {
+		top: 0;
+		right: 0;
+		width: 260px;
+		height: 100%;
+		content: '';
+		z-index: -1;
+		position: absolute;
+		border-top-right-radius: 200px;
+		border-bottom-right-radius: 200px;
+		background-color: var(--tv-base-c1);
+		@media #{$xl,$lg,$md,$sm,$xs,$xxs} {
+			display: none;
+		}
+	}
+	.option_action {
+		h3 {
+			color: #232323;
+			font-size: 20px;
+			font-weight: 700;
+			padding-bottom: 10px;
+			i {
+				margin-right: 8px;
+			}
+		}
+		.nice-select {
+			padding: 0;
+			border: none;
+			height: auto;
+			color: #232323;
+			font-size: 20px;
+			line-height: inherit;
+		}
+		input {
+			width: 80px;
+			border: none;
+			color: #232323;
+			&::placeholder {
+				color: #232323;
+			}
+		}
+	}
+	.submit-btn {
+		margin-bottom: 5px;
+		button {
+			color: #fff;
+			border: none;
+			font-size: 18px;
+			font-weight: 800;
+			padding: 13px 35px;
+			border-radius: 5px;
+			text-transform: uppercase;
+			background-color: var(--tv-black);
+		}
+	}
+}

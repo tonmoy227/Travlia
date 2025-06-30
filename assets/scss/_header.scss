@@ -1,0 +1,320 @@
+.tv-header-section {
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 10;
+	position: absolute;
+	.navbar-nav {
+		flex-direction: row;
+	}
+	.dropdown {
+		position: relative;
+		padding-right: 16px;
+		&:after {
+			top: 5px;
+			z-index: 2;
+			right: 0px;
+			content: "\f107";
+			font-size: 14px;
+			font-weight: 700;
+			font-weight: 900;
+			position: absolute;
+			font-family: 'Font Awesome 5 free';
+			transition: 0.3s all ease-in-out;
+		}
+		&:hover {
+			.dropdown-menu {
+				visibility: visible;
+				opacity: 1;
+				clip: inherit;
+				-webkit-transform: scaleY(1);
+				-khtml-transform: scaleY(1);
+				-moz-transform: scaleY(1);
+				-ms-transform: scaleY(1);
+				-o-transform: scaleY(1);
+				transform: scaleY(1);
+			}
+		}
+		&:is(.has-megamenu) {
+			position: static;
+			&:after {
+				display: none;
+			}
+			.dropdown-menu {
+				top: 89px;
+				gap: 5px 30px;
+				display: flex;
+				flex-wrap: wrap;
+				padding-top: 50px;
+				padding-left: 60px;
+				padding-bottom: 50px;
+				@media #{$xxl,$xl,$lg,$md} {
+					padding-left: 20px;
+				}
+				@media #{$lg,$md} {
+					top: 75px;
+					gap: 5px 15px;
+					justify-content: center;
+				}
+				li {
+					margin: 0;
+					width: 23%;
+					padding: 20px;
+					border-radius: 20px;
+					@media #{$lg,$md} {
+						width: 30%;
+					}
+					background-color: #E4D8F6;
+				}
+			}
+		}
+	}
+	.dropdown-menu {
+		left: 0;
+		top: 55px;
+		z-index: 100;
+		margin: 0px;
+		padding: 4px 0px 0px;
+		height: auto;
+		min-width: 270px;
+		display: block;
+		border: none;
+		border-radius: 0;
+		position: absolute;
+		opacity: 0;
+		background: #fff;
+		border-radius: 5px;
+		transform: scaleY(0);
+		transform-origin: 0 0 0;
+		-webkit-transform-origin: 0 0 0;
+		-ms-transform-origin: 0 0 0;
+		-o-transform-origin: 0 0 0;
+		text-align: left;
+		transition: all .3s ease-in-out;
+		box-shadow: -8px 8px 24px 0px rgba(0, 0, 0, 0.08);
+		.dropdown {
+			padding-right: 0;
+			&:after {
+				display: none;
+			}
+		}
+		.dropdown-menu {
+			top: 0px !important;
+			left: 100%;
+			transform-origin: 0 0 0;
+			-webkit-transform-origin: 0 0 0;
+			-ms-transform-origin: 0 0 0;
+			-o-transform-origin: 0 0 0;
+			transform: scaleY(0) !important;
+			a {
+				color: #fff;
+				font-size: 18px;
+				font-weight: 500;
+			}
+		}
+		li {
+			display: block;
+			margin: 5px 0px 0px !important;
+			transition: .3s all ease-in-out;
+			&:last-child {
+				border-bottom: none;
+			}
+			&:before {
+				display: none;
+			}
+			&:after {
+				color: #fff;
+				right: 15px;
+				transform: rotate(-90deg);
+				transition: .3s all ease-in-out;
+			}
+			&.dropdown:hover {
+				&:after {
+					transform: rotate(0);
+				}
+				.dropdown-menu {
+					top: 0; 
+					transform: scaleY(1) !important;
+				}
+			}
+			&.dropdown {
+				&:before {
+					color: #fff;
+					top: 10px;
+					right: 15px;
+				}
+			}
+			&:hover {
+				&:before {
+					color: #fff !important;
+				}
+			}
+		}
+		a {
+			width: 100%;
+			line-height: 1;
+			position: relative;
+			display: inline-block;
+			color: var(--tv-black) !important;
+			padding: 10px  0px 15px 18px !important;
+			font-weight: 600 !important;
+			font-size: 18px !important;
+			border-bottom: 1px solid #0b0b0b3b;
+			&:before {
+				width: 0 !important;
+				top: 5px !important;
+				left: 0px  !important;
+				right: auto !important;
+				transform: scale(0) !important;
+			}
+			&:after {
+				display: none;
+			}
+			&:hover,
+			&.active {
+				color: var(--tv-base-c1) !important;
+				padding-left: 30px !important;
+				&:after {
+					width: 100%;
+				}
+				&:before {
+					opacity: 1;
+					width: 5px !important;
+					visibility: visible;
+					transform: scale(1.0) !important;
+				}
+			}
+		}
+	}
+	.tv-mobile-menu-btn {
+		display: none;
+		@media #{$md,$sm,$xs,$xxs} {
+			display: block;
+		}
+		button {
+			padding: 0;
+			width: 30px;
+			height: 18px;
+			border: none;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			background-color: transparent;
+			justify-content: space-between;
+			span {
+				width: 19px;
+				height: 2px;
+				display: block;
+				background-color: var(--tv-black);
+				&:nth-child(even) {
+					width: 29px;
+				}
+			}
+		}
+	}
+	&:is(.header_style_one) {
+		.tv-header-content {
+			margin: 0 auto;
+			max-width: 1825px;
+			padding: 25px 15px;
+			@media #{$md,$sm,$xs,$xxs} {
+				padding: 15px;
+			}
+		}
+		.brand-logo {
+			max-width: 185px;
+		}
+		.main-navigation {
+			@media #{$md,$sm,$xs,$xxs} {
+				display: none;
+			}
+			li {
+				margin: 0px 25px;
+				@media #{$xl,$lg,$md,$sm,$xs,$xxs} {
+					margin: 0px 10px;
+				}
+				a {
+					font-size: 20px;
+					font-weight: 500;
+					color: var(--tv-black);
+				}
+				&:hover {
+					&:after {
+						color: var(--tv-base-c1);
+					}
+					a {
+						color: var(--tv-base-c1);
+					}
+				}
+			}
+		}
+		.header-action {
+			gap: 20px;
+			.search-btn {
+				padding: 0;
+				width: 55px;
+				height: 55px;
+				border: none;
+				border-radius: 100%;
+				color: var(--tv-black);
+				background-color: #f2f2f2;
+				@media #{$md,$sm,$xs,$xxs} {
+					display: none;
+				}
+			}
+			.header-cta {
+				gap: 10px;
+				@media #{$lg,$md,$sm,$xs,$xxs} {
+					display: none !important;
+				}
+				.item-icon {
+					width: 55px;
+					height: 55px;
+					border-radius: 100%;
+					color: var(--tv-black);
+					background-color: #f2f2f2;
+				}
+				.item-text {
+					h3 {
+						font-size: 20px;
+						font-weight: 800;
+						color: var(--tv-black);
+					}
+					a {
+						color: #0f0f0f;
+						font-size: 18px;
+						font-weight: 500;
+					}
+				}
+			}
+			.cta-btn {
+				@media #{$xxs} {
+					display: none;
+				}
+				a {
+					color: #fff;
+					font-size: 18px;
+					font-weight: 800;
+					padding: 13px 35px;
+					border-radius: 5px;
+					white-space: nowrap;
+					background-color: var(--tv-black);
+					@media #{$lg,$md,$sm,$xs,$xxs} {
+						padding: 13px 20px;
+					}
+				}
+			}
+			.ofcanvas-btn {
+				width: 55px;
+				height: 55px;
+				border: none;
+				border-radius: 100%;
+				color: var(--tv-black);
+				background-color: var(--tv-base-c1);
+				@media #{$lg,$md,$sm,$xs,$xxs} {
+					display: none;
+				}
+			}
+		}
+	}
+}

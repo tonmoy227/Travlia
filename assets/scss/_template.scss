@@ -9,11 +9,13 @@ Font load
 	src: local('../fonts/Tondu Beta'), url('../fonts/Tondu_Beta.woff') format('woff');
 }
 :root {
-	--tz-body-color: #74787C;
-	--tz-title-color: #1A1A1A;
-	--tz-heading: "Inter", sans-serif;
-	--tz-body-font: "Inter", sans-serif;
-	--tz-prime-c: #683BF2;
+	--tv-barlow: "Barlow Condensed", sans-serif;
+	--tv-urbanist: "Urbanist", sans-serif;
+	--tv-just: "Just Another Hand", cursive;
+	--tv-tondu: 'Tondu Beta';
+	--tv-base-c1: #fad71b;
+	--tv-black: #040404;
+	--tv-body-c: #0b0b0b;
 	--cube-1: cubic-bezier(0.55, 0.085, 0, 0.99);
 	--cube-2: all .25s cubic-bezier(.645,.045,.355,1);
 	--cube-3: cubic-bezier(0.25, 1, 0.5, 1);
