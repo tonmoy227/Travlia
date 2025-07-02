@@ -1,0 +1,132 @@
+.tv-contact-content {
+	margin: 0px 55px;
+	overflow: hidden;
+	border-radius: 20px;
+	background-color: #f5e0d0;
+	@media #{$xl,$lg,$md,$sm,$xs,$xxs} {
+		margin: 0;
+		border-radius: 0;
+	}
+	.tv-cont-sh4 {
+		top: 35px;
+		right: 20px;
+		@media #{$lg,$md,$sm,$xs,$xxs} {
+			display: none;
+		}
+	}
+	.tv-cont-sh5 {
+		top: 0;
+		left: 48%;
+		transform: translateX(-50%);
+		@media #{$lg,$md,$sm,$xs,$xxs} {
+			display: none;
+		}
+	}
+	.tv-cont-sh6 {
+		top: 10px;
+		left: 20px;
+		@media #{$lg,$md,$sm,$xs,$xxs} {
+			display: none;
+		}
+	}
+	.tv-cont-sh7 {
+		left: 0;
+		bottom: 40px;
+		@media #{$lg,$md,$sm,$xs,$xxs} {
+			display: none;
+		}
+	}
+	.tv-cont-sh8 {
+		right: 80px;
+		bottom: 40%;
+		@media #{$lg,$md,$sm,$xs,$xxs} {
+			display: none;
+		}
+	}
+	.tv-cont-sh9 {
+		bottom: 20px;
+		right: 30px;
+		@media #{$lg,$md,$sm,$xs,$xxs} {
+			display: none;
+		}
+	}
+}
+.tv-contact-wrap {
+	padding-right: 105px;
+	@media #{$lg,$md,$sm,$xs,$xxs} {
+		padding-right: 0;
+	}
+	@media #{$md,$sm,$xs,$xxs} {
+		gap: 20px;
+		flex-wrap: wrap;
+		justify-content: center !important;
+	}
+	.tv-cont-img {
+		left: 115px;
+		bottom: -110px;
+		position: absolute;
+		@media #{$md,$sm,$xs,$xxs} {
+			display: none;
+		}
+	}
+	.tv-cn-sh2 {
+		top: 0;
+		left: 10px;
+		@media #{$md,$sm,$xs,$xxs} {
+			position: static !important;
+		}
+	}
+	.tv-cn-sh3 {
+		top: 28%;
+		left: 11%;
+		@media #{$md,$sm,$xs,$xxs} {
+			position: static !important;
+		}
+	}
+}
+.tv-contact-form {
+	width: 100%;
+	padding: 50px;
+	max-width: 540px;
+	border-radius: 10px;
+	background-color: #fff;
+	@media #{$md,$sm,$xs,$xxs} {
+		max-width: 100%;
+	}
+	@media #{$xxs} {
+		padding: 30px;
+	}
+	.tv-cont-shape1 {
+		right: 0;
+		top: 20px;
+		@media #{$xxs} {
+			display: none;
+		}
+	}
+	h3 {
+		font-size: 54px;
+		font-weight: 800;
+		max-width: 255px;
+		color: var(--tv-black );
+		@media #{$xxs} {
+			font-size: 40px;
+		}
+	}
+	.tv-booking-option::before {
+		display: none;
+	}
+	.tv-booking-option {
+		padding: 0;
+		margin-top: 40px;
+	}
+	.tv-booking-option .option_action {
+		width: 100%;
+		margin-bottom: 25px;
+		padding-bottom: 15px;
+		display: inline-block;
+		border-bottom: 1px solid #d0cbcb;
+	}
+	.tv-booking-option .option_action h3 {
+		padding-bottom: 5px;
+	}
+}

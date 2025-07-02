@@ -1,0 +1,165 @@
+.tv-ftr-sec {
+	@media #{$xxxl,$xxl,$xl,$lg,$md,$sm,$xs,$xxs} {
+		overflow: hidden;
+	}
+	.tv-ftr-img {
+		left: 0;
+		top: -80px;
+		@media #{$xxxl} {
+			left: -7%;
+		}
+		@media #{$xxl} {
+			left: -23%;
+		}
+		@media #{$xl} {
+			left: -42%;
+		}
+		@media #{$lg,$md,$sm,$xs,$xxs} {
+			display: none;
+		}
+	}
+}
+.tv-ftr-cta {
+	border-bottom: 1px solid #131b23;
+}
+.tv-ftr-cta-wrap {
+	@media #{$lg,$md,$sm,$xs,$xxs} {
+		justify-content: center !important;
+	}
+}
+.tv-ftr-cta-text {
+	max-width: 690px;
+	h2 {
+		color: #fff;
+		font-size: 50px;
+		font-weight: 800;
+		padding: 30px 0px 50px;
+		@media #{$xl} {
+			font-size: 46px;
+		}
+		@media #{$lg} {
+			font-size: 40px;
+		}
+		@media #{$md,$sm} {
+			font-size: 35px;
+		}
+		@media #{$xs} {
+			font-size: 30px;
+		}
+		@media #{$xxs} {
+			font-size: 28px;
+		}
+		@media #{$xxxs} {
+			font-size: 26px;
+		}
+	}
+	.tv-btn-cta {
+		gap: 20px 45px;
+		.tv-btn1 {
+			a {
+				color: var(--tv-black);
+			}
+		}
+		a {
+			color: #fff;
+			font-size: 18px;
+			font-weight: 900;
+		}
+	}
+}
+.tv-ftr-content {
+	gap: 35px;
+	flex-wrap: wrap;
+}
+.tv-ftr-widget {
+	.widgte-title {
+		color: #fff;
+		font-size: 22px;
+		font-weight: 800;
+		padding-bottom: 28px;
+	}
+	.menu-widget {
+		li {
+			margin-bottom: 13px;
+			a {
+				color: #a3a7ac;
+				font-size: 17px;
+				font-weight: 800;
+				position: relative;
+				padding-left: 24px;
+				&:before {
+					top: 0;
+					left: 0;
+					font-weight: 900;
+					content: '\f101';
+					position: absolute;
+					color: var(--tv-base-c1);
+					font-family: 'Font Awesome 6 Free';
+				}
+			}
+		}
+	}
+	.counter-widget {
+		width: 230px;
+		padding: 30px 40px;
+		border-radius: 30px;
+		background-color: #131b23;
+	}
+	.counter-info-item {
+		margin-bottom: 15px;
+		&:last-child {
+			margin-bottom: 0;
+		}
+		h3 {
+			color: #fff;
+			font-size: 30px;
+			font-weight: 800;
+			padding-bottom: 5px;
+		}
+		p {
+			color: #9b9fa4;
+			font-size: 16px;
+			font-weight: 800;
+		}
+	}
+	.newslatter-widget {
+		width: 100%;
+		max-width: 485px;
+		p {
+			color: #fff;
+		}
+		form {
+			margin-top: 30px;
+			position: relative;
+		}
+		input {
+			width: 100%;
+			height: 60px;
+			border: none;
+			padding-left: 30px;
+			border-radius: 15px;
+			background-color: #373a41;
+		}
+		button {
+			top: 0;
+			right: 0;
+			height: 100%;
+			border: none;
+			font-size: 17px;
+			font-weight: 600;
+			padding: 10px 25px;
+			position: absolute;
+			color: var(--tv-black);
+			border-top-right-radius: 15px;
+			border-bottom-right-radius: 15px;
+			background-color: var(--tv-base-c1);
+		}
+	}
+}
+.tv-ftr-copyright {
+	color: #fff;
+	font-size: 16px;
+	font-weight: 600;
+	padding: 20px 15px;
+	border-top: 1px solid #131b23;
+}

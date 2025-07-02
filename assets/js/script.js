@@ -85,7 +85,7 @@ Last change:    00/00/00
 		$(this).css('background-image', 'url('+ $(this).attr('data-background') + ')');
 	});
 	$( function() {
-		$( "#datepicker" ).datepicker({
+		$( ".date-pick" ).datepicker({
 			format: 'dd-mm-yyyy' 
 		});
 	} );
@@ -115,7 +115,24 @@ Last change:    00/00/00
 		preloader: false,
 		fixedContentPos: false,
 	});
-
+	$('.marquee-left').marquee({
+		gap: 0,
+		speed: 40,
+		delayBeforeStart: 0,
+		direction: 'left',
+		duplicated: true,
+		pauseOnHover: true,
+		startVisible:true,
+	});
+	$('.marquee-right').marquee({
+		gap: 28,
+		speed: 40,
+		delayBeforeStart: 0,
+		direction: 'right',
+		duplicated: true,
+		pauseOnHover: true,
+		startVisible:true,
+	});
 	// windows-loaded-before-functions
 	document.addEventListener("DOMContentLoaded", function () {
 		window.addEventListener('load', function(){
@@ -135,9 +152,193 @@ Last change:    00/00/00
 			}, 700);
 		})		
 	});
+	gsap.utils.toArray('.tv-explore-scroller').forEach((el, index) => { 
+		let Vertex = gsap.timeline({
+			scrollTrigger: {
+				trigger: ".tv-explore-sec",
+				scrub: 6,
+				start: "top 20%",
+				end: "bottom 20%",
+				toggleActions: "play none none reverse", 
+				markers: false
+			}
+		})
+
+		Vertex
+		.set(el, {transformOrigin: 'top bottom'})
+		.fromTo(el, { x: 0  }, { x: -1200 , duration: 30, immediateRender: false})
+	});
+	gsap.utils.toArray('.tv-place-slider').forEach((el, index) => { 
+		let Vertex = gsap.timeline({
+			scrollTrigger: {
+				trigger: ".tv-place-slider",
+				start: "top 30%",      
+				end: "bottom 0%",    
+				toggleClass: { targets: ".tv-place-slider", className: "active" },
+				toggleActions: "play none none reverse", 
+				markers: false
+			}
+		})
+	});
+	if ($('.tv-explore-slide').length > 0 ) {
+		var slider = new Swiper('.tv-explore-slide', {
+			spaceBetween: 20,
+			slidesPerView: 4,
+			loop: true,
+			speed: 1000,
+			breakpoints: {
+				'1600': {
+					slidesPerView: 4,
+				},
+				'1200': {
+					slidesPerView: 3,
+				},
+				'992': {
+					slidesPerView: 2,
+				},
+				'768': {
+					slidesPerView: 2,
+				},
+				'576': {
+					slidesPerView: 1,
+				},
+				'480': {
+					slidesPerView: 1,
+				},
+				'0': {
+					slidesPerView: 1,
+				},
+			},
+		});
+	};
+	if ($('.tv-place-slider').length > 0 ) {
+		var slider = new Swiper('.tv-place-slider', {
+			slidesPerView: 5,
+			loop: true,
+			spaceBetween: 15,
+			centeredSlides: true,
+			speed: 1000,
+			on: {
+				slideChange: function () {
+					var activeIndex = this.activeIndex;
+					var realIndex = this.slides[activeIndex].getAttribute('data-swiper-slide-index'); 
+					$('.swiper-slide').removeClass('swiper-slide-nth-prev-2 swiper-slide-nth-next-2');
+					$('.swiper-slide[data-swiper-slide-index="'+realIndex+'"]').prev().prev().addClass('swiper-slide-nth-prev-2');
+					$('.swiper-slide[data-swiper-slide-index="'+realIndex+'"]').next().next().addClass('swiper-slide-nth-next-2');
+				},
+			},
+			breakpoints: {
+				'1600': {
+					slidesPerView: 5,
+				},
+				'1200': {
+					slidesPerView: 4,
+					spaceBetween: 40,
+				},
+				'992': {
+					slidesPerView: 3,
+					spaceBetween: 20,
+				},
+				'991': {
+					slidesPerView: 2,
+					centeredSlides: false,
+				},
+				'768': {
+					slidesPerView: 2,
+					spaceBetween: 20,
+					centeredSlides: false,
+				},
+				'576': {
+					slidesPerView: 1,
+					spaceBetween: 20,
+					centeredSlides: false,
+				},
+				'0': {
+					slidesPerView: 1,
+					centeredSlides: false,
+				},
+			},
+		});
+	};
+	if ($('.tv-testi-slider').length > 0 ) {
+		var slider = new Swiper('.tv-testi-slider', {
+			slidesPerView: 5,
+			loop: true,
+			spaceBetween: 15,
+			centeredSlides: true,
+			speed: 1000,
+			breakpoints: {
+				'1600': {
+					slidesPerView: 5,
+				},
+				'1200': {
+					slidesPerView: 4,
+					spaceBetween: 40,
+				},
+				'992': {
+					slidesPerView: 3,
+					spaceBetween: 20,
+				},
+				'991': {
+					slidesPerView: 2,
+					centeredSlides: false,
+				},
+				'768': {
+					slidesPerView: 2,
+					spaceBetween: 20,
+					centeredSlides: false,
+				},
+				'576': {
+					slidesPerView: 1,
+					spaceBetween: 20,
+					centeredSlides: false,
+				},
+				'0': {
+					slidesPerView: 1,
+					centeredSlides: false,
+				},
+			},
+		});
+	};
+	if ($('.ra-sponsor-slider').length > 0 ) {
+		var slider = new Swiper('.ra-sponsor-slider', {
+			spaceBetween: 80,
+			slidesPerView: 6,
+			loop: true,
+			autoplay: {
+				enabled: true,
+				delay: 6000
+			},
+			speed: 400,
+			breakpoints: {
+				'1600': {
+					slidesPerView: 6,
+				},
+				'1200': {
+					slidesPerView: 5,
+					spaceBetween: 40,
+				},
+				'992': {
+					slidesPerView: 5,
+					spaceBetween: 20,
+				},
+				'768': {
+					slidesPerView: 5,
+					spaceBetween: 20,
+				},
+				'576': {
+					slidesPerView: 3,
+					spaceBetween: 20,
+				},
+				'480': {
+					slidesPerView: 2,
+					spaceBetween: 20,
+				},
+				'0': {
+					slidesPerView: 1,
+				},
+			},
+		});
+	};
 	
-
-
-
-
 })(jQuery);

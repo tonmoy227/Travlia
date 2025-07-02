@@ -1,0 +1,64 @@
+.tv-testi-item {
+	width: 215px;
+	.item-img {
+		margin-bottom: 40px;
+		.inner-img {
+			width: 215px;
+			height: 215px;
+			margin: 0 auto;
+			overflow: hidden;
+			border-radius: 100%;
+			transition: all 700ms ease-in-out;
+		}
+	}
+	.item-text {
+		opacity: 0;
+		max-width: 460px;
+		transform: translateY(50px);
+		transition: all 700ms ease-in-out;
+		p {
+			color: #0b0b0b;
+			padding-top: 30px;
+		}
+		span {
+			color: #fff;
+			font-size: 16px;
+			font-weight: 800;
+			padding: 10px 20px;
+			border-radius: 50px;
+			background-color: #5daa65;
+			i {
+				margin-right: 5px;
+			}
+		}
+		.item-author {
+			gap: 20px;
+		}
+		.inner-text {
+			h3 {
+				font-size: 30px;
+				font-weight: 800;
+				padding-bottom: 4px;
+				color: var(--tv-black);
+			}
+			p {
+				color: #bababa;
+				padding-top: 0;
+				font-weight: 500;
+			}
+		}
+	}
+}
+.swiper-slide-active {
+	.tv-testi-item {
+		width: 485px;
+		.inner-img {
+			width: 355px;
+			height: 355px;
+		}
+		.item-text {
+			opacity: 1;
+			transform: translateY(0px);
+		}
+	}
+}

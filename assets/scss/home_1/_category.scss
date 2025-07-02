@@ -1,0 +1,146 @@
+.tv-category-top {
+	gap: 20px;
+	flex-wrap: wrap;
+}
+.tv-category-mail {
+	width: 100%;
+	max-width: 570px;
+	input {
+		width: 100%;
+		height: 85px;
+		border: none;
+		font-size: 40px;
+		color: var(--tv-black);
+		border-bottom: 1px solid var(--tv-black);
+		@media #{$xxs} {
+			height: 60px;
+			font-size: 25px;
+		}
+		&::placeholder {
+			font-size: 40px;
+			color: var(--tv-black);
+			@media #{$xxs} {
+				font-size: 25px;
+			}
+		}
+	}
+	button {
+		top: 30px;
+		right: 0;
+		padding: 0;
+		border: none;
+		font-size: 30px;
+		position: absolute;
+		transform: rotate(-40deg);
+		background-color: transparent;
+		@media #{$xxs} {
+			top: 25px;
+			font-size: 20px;
+		}
+	}
+}
+
+.tv-cate-list {
+	width: 100%;
+	max-width: 368px;
+	@media #{$lg,$md,$sm,$xs,$xxs} {
+		gap: 30px;
+		display: flex;
+		max-width: 100%;
+		align-items: center;
+		justify-content: center;
+	}
+	@media #{$sm,$xs,$xxs} {
+		flex-wrap: wrap;
+	}
+	li {
+		gap: 20px;
+		line-height: 1;
+		font-size: 40px;
+		align-items: center;
+		margin-bottom: 15px;
+		color: var(--tv-black);
+		display: flex !important;
+		font-family: var(--tv-just);
+		i {
+			width: 50px;
+			font-size: 40px;
+		}
+	}
+	.item-img {
+		overflow: hidden;
+		border-radius: 25px;
+		@media #{$sm,$xs,$xxs} {
+			margin-top: 0px;
+		}
+	}
+}
+.tv-category-content {
+	gap: 20px;
+	@media #{$lg,$md,$sm,$xs,$xxs} {
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+}
+.tv-cate-img1 {
+	max-width: 700px;
+	.item-img1 {
+		overflow: hidden;
+		border-radius: 30px;
+	}
+	.item-img2 {
+		overflow: hidden;
+		border-radius: 30px;
+	}
+	.item-img-text {
+		gap: 15px;
+		@media #{$xl,$lg,$md,$sm,$xs,$xxs} {
+			flex-wrap: wrap;
+			justify-content: center !important;
+		}
+	}
+	.item-text {
+		font-size: 45px;
+		line-height: 1.1;
+		max-width: 260px;
+		font-weight: 800;
+		text-align: right;
+		span {
+			color: #e83b3a;
+		}
+	}
+}
+.tv-cate-img2 {
+	width: 100%;
+	max-width: 451px;
+	@media #{$lg,$md,$sm,$xs,$xxs} {
+		max-width: 100%;
+		display: flex;
+		justify-content: center;
+	}
+	@media #{$md,$sm,$xs,$xxs} {
+		flex-wrap: wrap;
+	}
+	.item-img {
+		overflow: hidden;
+		border-radius: 20px;
+		margin-bottom: 35px;
+	}
+	.item-text {
+		gap: 20px;
+		padding-left: 25px;
+		@media #{$xxs} {
+			flex-wrap: wrap;
+		}
+		.inner-img {
+			width: 90px;
+			height: 90px;
+			overflow: hidden;
+			border-radius: 100%;
+		}
+		.inner-text {
+			max-width: 295px;
+			line-height: 1.4;
+		}
+	}
+}

@@ -30,8 +30,11 @@
 	.tv-hr1-img {
 		top: 0;
 		right: 0;
-		max-width: 955px;
+		width: 53%;
+		overflow: hidden;
 		position: absolute;
+		border-top-right-radius: 30px;
+		border-bottom-right-radius: 30px;
 		@media #{$xl} {
 			max-width: 750px;
 		}
