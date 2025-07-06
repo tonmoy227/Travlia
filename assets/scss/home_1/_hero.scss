@@ -35,6 +35,20 @@
 		position: absolute;
 		border-top-right-radius: 30px;
 		border-bottom-right-radius: 30px;
+		&:after {
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			content: '';
+			position: absolute;
+			background-color: rgba(0, 0, 0, .3);
+		}
+		video {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
 		@media #{$xl} {
 			max-width: 750px;
 		}
@@ -117,6 +131,10 @@
 		font-size: 16px;
 		font-weight: 700;
 		background-color: transparent;
+		transition: all 300ms ease-in-out;
+		&:hover {
+			color: var(--tv-base-c1);
+		}
 		i {
 			margin-right: 5px;
 		}
@@ -127,6 +145,7 @@
 			font-size: 16px;
 			margin-right: 15px;
 			&:hover {
+				transform: scale(1.2);
 				color: var(--tv-base-c1);
 			}
 		}
@@ -175,6 +194,9 @@
 			height: 70px;
 			border-radius: 100%;
 			background-color: #fff;
+			&:hover {
+				background-color: var(--tv-base-c1);
+			}
 		}
 	}
 }
@@ -226,13 +248,14 @@
 			line-height: inherit;
 		}
 		input {
-			width: 80px;
+			width: 85px;
 			border: none;
 			color: #232323;
 			&::placeholder {
 				color: #232323;
 			}
 		}
+
 	}
 	.submit-btn {
 		margin-bottom: 5px;
@@ -245,6 +268,30 @@
 			border-radius: 5px;
 			text-transform: uppercase;
 			background-color: var(--tv-black);
+			transition: all 300ms ease-in-out;
+			&:hover {
+				background-color: #e83b3a;
+			}
 		}
+	}
+}
+.ui-widget-header .ui-icon {
+	background-position: 0;
+	background-image: url(../img/arrow2.png);
+}
+.ui-datepicker .ui-datepicker-prev span,
+.ui-datepicker .ui-datepicker-next span {
+	margin-top: -4px;
+}
+.ui-icon-circle-triangle-e {
+	transform: rotate(180deg);
+	background-position: 0;
+}
+.ui-datepicker .ui-datepicker-prev, 
+.ui-datepicker .ui-datepicker-next {
+	cursor: pointer;
+	&:focus,&:hover {
+		border: none;
+		outline: none;
 	}
 }

@@ -58,12 +58,19 @@
 		.tv-btn1 {
 			a {
 				color: var(--tv-black);
+				&:hover {
+					color: var(--tv-black);
+					background-color: #fff;
+				}
 			}
 		}
 		a {
 			color: #fff;
 			font-size: 18px;
 			font-weight: 900;
+			&:hover {
+				color: var(--tv-base-c1);
+			}
 		}
 	}
 }
@@ -95,6 +102,10 @@
 					position: absolute;
 					color: var(--tv-base-c1);
 					font-family: 'Font Awesome 6 Free';
+				}
+				&:hover {
+					color: var(--tv-base-c1);
+					transform: translateX(10px);
 				}
 			}
 		}
@@ -139,6 +150,7 @@
 			padding-left: 30px;
 			border-radius: 15px;
 			background-color: #373a41;
+			color: #fff;
 		}
 		button {
 			top: 0;
@@ -153,6 +165,10 @@
 			border-top-right-radius: 15px;
 			border-bottom-right-radius: 15px;
 			background-color: var(--tv-base-c1);
+			transition: all 500ms ease-in-out;
+			&:hover {
+				background-color: #fff;
+			}
 		}
 	}
 }

@@ -60,6 +60,9 @@
 			a {
 				font-size: 16px;
 				margin: 0px 8px;
+				&:hover {
+					color: var(--tv-base-c1);
+				}
 			}
 			&:nth-child(2) {
 				padding: 5px 8px;
@@ -96,6 +99,7 @@
 	}
 	.swiper-slide-prev {
 		padding-top: 20px;
+		transition: all 500ms ease-in-out;
 		.tv-place-item {
 			height: 435px;
 			transform: perspective(800px) translateX(0px) translateY(20px) rotateY(15deg) skewY(0deg);
@@ -113,6 +117,7 @@
 	}
 	.swiper-slide-nth-next-2 {
 		padding-top: 20px;
+		transition: all 500ms ease-in-out;
 		.tv-place-item {
 			height: 482px;
 			transform: perspective(500px) translateX(-8px) rotateY(-15deg) skewY(0deg);
@@ -133,25 +138,34 @@
 		}
 	}
 	&:is(.active) {
+		.swiper-slide-nth-prev-2 {
+			padding: 0;
+		}
 		.swiper-slide-nth-prev-2 .tv-place-item {
 			height: 475px;
 			transform: perspective(2000px) translateX(0) rotateY(0) skewY(0deg);
+		}
+		.swiper-slide-prev {
+			padding: 0;
 		}
 		.swiper-slide-prev .tv-place-item {
 			height: 475px;
 			transform: perspective(2000px) translateX(0) rotateY(0) skewY(0deg);
 		}
 		.swiper-slide-active {
-			padding-top: 20px;
+			padding: 0;
 			.tv-place-item {
 			}
+		}
+		.swiper-slide-nth-next-2 {
+			padding: 0;
 		}
 		.swiper-slide-nth-next-2 .tv-place-item {
 			height: 475px;
 			transform: perspective(2000px) translateX(0) rotateY(0) skewY(0deg);
 		}
 		.swiper-slide-next {
-			padding-top: 20px;
+			padding: 0;
 		}
 		.swiper-slide-next .tv-place-item {
 			height: 475px;

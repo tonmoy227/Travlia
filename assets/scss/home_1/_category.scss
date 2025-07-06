@@ -33,6 +33,10 @@
 		position: absolute;
 		transform: rotate(-40deg);
 		background-color: transparent;
+		transition: all 500ms ease-in-out;
+		&:hover {
+			color: var(--tv-base-c1);
+		}
 		@media #{$xxs} {
 			top: 25px;
 			font-size: 20px;
@@ -54,17 +58,22 @@
 		flex-wrap: wrap;
 	}
 	li {
-		gap: 20px;
-		line-height: 1;
-		font-size: 40px;
-		align-items: center;
-		margin-bottom: 15px;
-		color: var(--tv-black);
-		display: flex !important;
-		font-family: var(--tv-just);
-		i {
-			width: 50px;
+		a {
+			gap: 20px;
+			line-height: 1;
 			font-size: 40px;
+			align-items: center;
+			margin-bottom: 15px;
+			color: var(--tv-black);
+			display: flex !important;
+			font-family: var(--tv-just);
+			i {
+				width: 50px;
+				font-size: 40px;
+			}
+			&:hover {
+				color: #e83b3a;
+			}
 		}
 	}
 	.item-img {
