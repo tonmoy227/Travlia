@@ -47,7 +47,10 @@ body {
 		max-width: 1590px;
 	}
 }
-
+.home-2 {
+	font-size: 18px;
+	font-family: var(--tv-urbanist);
+}
 /*Reset area*/
 /*-------------------------*/
 .ul-li ul {
@@ -78,6 +81,18 @@ body {
 	margin-bottom: 0;
 	color: var(--tv-black);
 	font-family: var(--tv-barlow);
+}
+.headline-2 h1,
+.headline-2 h2,
+.headline-2 h3,
+.headline-2 h4,
+.headline-2 h5,
+.headline-2 h6 {
+	line-height: 1;
+	font-weight: 400;
+	margin-bottom: 0;
+	color: var(--tv-black);
+	font-family: var(--tv-tondu);
 }
 @keyframes loading {
 	0% {
