@@ -2,20 +2,73 @@
 Font load
 ===========*/
 @import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Just+Another+Hand&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Playball&display=swap');
 @font-face {
 	font-family: 'Tondu Beta';
 	font-style: normal;
 	font-weight: normal;
 	src: local('../fonts/Tondu Beta'), url('../fonts/Tondu_Beta.woff') format('woff');
 }
+@font-face {
+	font-family: 'Wulkan';
+	font-style: normal;
+	font-weight: 700;
+	src: local('../fonts/Wulkan'), url('../fonts/WulkanDisplayBold.woff') format('woff');
+}
+@font-face {
+	font-family: 'Wulkan';
+	font-style: italic;
+	font-weight: 700;
+	src: local('../fonts/Wulkan'), url('../fonts/WulkanDisplayBoldItalic.woff') format('woff');
+}
+@font-face {
+	font-family: 'Wulkan';
+	font-style: normal;
+	font-weight: 500;
+	src: local('../fonts/Wulkan'), url('../fonts/WulkanDisplayMedium.woff') format('woff');
+}
+@font-face {
+	font-family: 'Wulkan';
+	font-style: italic;
+	font-weight: 500;
+	src: local('../fonts/Wulkan'), url('../fonts/WulkanDisplayMediumItalic.woff') format('woff');
+}
+@font-face {
+	font-family: 'Wulkan';
+	font-style: normal;
+	font-weight: 600;
+	src: local('../fonts/Wulkan'), url('../fonts/WulkanDisplaySemiBold.woff') format('woff');
+}
+
+@font-face {
+	font-family: 'Wulkan';
+	font-style: italic;
+	font-weight: 600;
+	src: local('../fonts/Wulkan'), url('../fonts/WulkanDisplaySemiBoldItalic.woff') format('woff');
+}
+@font-face {
+	font-family: 'Wulkan';
+	font-style: italic;
+	font-weight: 900;
+	src: local('../fonts/Wulkan'), url('../fonts/WulkanDisplayBlackItalic.woff') format('woff');
+}
+
 :root {
 	--tv-barlow: "Barlow Condensed", sans-serif;
 	--tv-urbanist: "Urbanist", sans-serif;
 	--tv-just: "Just Another Hand", cursive;
 	--tv-tondu: 'Tondu Beta';
+	--tv-monts: "Montserrat", sans-serif;
+	--tv-wulkan: 'Wulkan';
+	--tv-playball: "Playball", cursive;
+	--tv-dm: "DM Sans", sans-serif;
 	--tv-base-c1: #fad71b;
+	--tv-base-c2: #EB662B;
 	--tv-black: #040404;
+	--tv-black2: #0A0A0A;
 	--tv-body-c: #0b0b0b;
+	--tv-body-c2: rgba(10, 10, 10, .8);
 	--cube-1: cubic-bezier(0.55, 0.085, 0, 0.99);
 	--cube-2: all .25s cubic-bezier(.645,.045,.355,1);
 	--cube-3: cubic-bezier(0.25, 1, 0.5, 1);

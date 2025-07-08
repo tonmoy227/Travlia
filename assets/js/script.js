@@ -535,7 +535,7 @@ Last change:    00/00/00
 		var TVCONT = gsap.timeline({
 			scrollTrigger: {
 				trigger: '.tv-contact-content',
-				start: "top 30%",
+				start: "top 100%",
 				toggleActions: 'play none none reverse',
 				markers: false,
 			}
@@ -553,6 +553,19 @@ Last change:    00/00/00
 		.from(".tv-contact-content .tv-cont-sh8", { opacity: 0,  yPercent: 100, duration: 1, rotate: "90deg",   ease: "power1.out" },"<= .5")
 		.from(".tv-contact-form .tv-cont-shape1", { opacity: 0,  xPercent: -100, duration: 1, rotateX: "90deg",   ease: "power1.out" },"<= .5")
 	};
+
+	if($('.quantity-input-2').length) {
+		$('.quantity-input-2').inputarrow({
+			renderNext: function(input) {
+				return $('<span class="custom-next"><i class="fa-solid fa-plus"></i></span>').insertAfter(input);
+			},
+			renderPrev: function(input) {
+				return $('<span class="custom-prev"><i class="fa-solid fa-minus"></i></span>').insertBefore(input);
+			},
+			disabledClassName: 'custom-disabled'
+		});
+	};
+
 	if ($('.tv-explore-slide').length > 0 ) {
 		var slider = new Swiper('.tv-explore-slide', {
 			spaceBetween: 20,
