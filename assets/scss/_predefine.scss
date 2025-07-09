@@ -407,7 +407,7 @@ a {
 		span {
 			z-index: 1;
 			font-size: 16px;
-			font-weight: 500;
+			font-weight: 600;
 			padding: 16px 30px;
 			position: relative;
 			transition: all .3s;
@@ -549,6 +549,8 @@ a {
 		font-weight: 700;
 		max-width: 570px;
 		span {
+			color: #868686;
+			display: inline;
 			font-style: italic;
 		}
 		@media #{$xl} {
@@ -569,6 +571,9 @@ a {
 		@media #{$xxxs} {
 			font-size: 28px;
 		}
+	}
+	p {
+		padding-top: 18px;
 	}
 }
 
@@ -717,7 +722,40 @@ a {
 	-webkit-transform: scale(0);
 	transform: scale(0);
 }
-
+.home-3 {
+	.cb-cursor:before {
+		width: 60px;
+		height: 60px;
+		background: #0A0A0A1F;
+		backdrop-filter: blur(16px); 
+	}
+	.cb-cursor.-normal:before,
+	.cb-cursor.-text:before {
+		background: #0A0A0A1F;
+		backdrop-filter: blur(16px);
+	}
+	.cb-cursor-text {
+		width: 48px;
+		height: 48px;
+		font-size: 14px;
+		&:after,
+		&:before {
+			top: 50%;
+			right: -6px;
+			color: #0A0A0A;
+			content: '\f054';
+			font-weight: 900;
+			position: absolute;
+			font-family: 'Font Awesome 6 Free';
+			transform: translateY(-50%);
+		}
+		&:before {
+			left: -6px;
+			right: auto;
+			content: '\f053';
+		}
+	}
+}
 // txa-common-css-start
 
 @for $i from 1 through 40 {

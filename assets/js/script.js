@@ -565,7 +565,26 @@ Last change:    00/00/00
 			disabledClassName: 'custom-disabled'
 		});
 	};
-
+	if ($('.line_shape_2').length > 0 ) {
+		const path = document.getElementById('line_path');
+		const plane = document.getElementById('paper-plane');
+		const pathLength = path.getTotalLength();
+		let progress = 0.5; 
+		let speed = 0.0012; 
+		function animatePlane() {
+			const point = path.getPointAtLength(progress * pathLength);
+			plane.setAttribute('transform', `translate(${point.x}, ${point.y})`);
+			const tangent = path.getPointAtLength((progress + 0.01) * pathLength);
+			const angle = Math.atan2(tangent.y - point.y, tangent.x - point.x);
+			plane.setAttribute('transform', `translate(${point.x}, ${point.y}) rotate(${angle * 180 / Math.PI})`);
+			progress += speed;
+			if (progress > 1) {
+				progress = 0;
+			}
+			requestAnimationFrame(animatePlane);
+		}
+		animatePlane();
+	};
 	if ($('.tv-explore-slide').length > 0 ) {
 		var slider = new Swiper('.tv-explore-slide', {
 			spaceBetween: 20,
@@ -739,4 +758,49 @@ Last change:    00/00/00
 			swiper: quick_view,
 		},
 	});
+	if ($('.tv-desti3-slider').length > 0 ) {
+		var slider = new Swiper('.tv-desti3-slider', {
+			spaceBetween: 20,
+			slidesPerView: 5,
+			loop: true,
+			speed: 1000,
+			breakpoints: {
+				'1600': {
+					slidesPerView: 5,
+				},
+				'1200': {
+					slidesPerView: 5,
+				},
+				'992': {
+					slidesPerView: 4,
+				},
+				'768': {
+					slidesPerView: 3,
+				},
+				'576': {
+					slidesPerView: 2,
+				},
+				'480': {
+					slidesPerView: 1,
+				},
+				'0': {
+					slidesPerView: 1,
+				},
+			},
+		});
+	};
+
+	if ($('.tv-testi3-slider').length > 0 ) {
+		var slider = new Swiper('.tv-testi3-slider', {
+			spaceBetween: 20,
+			slidesPerView: 1,
+			loop: true,
+			speed: 1000,
+			navigation: {
+				prevEl: ".tst-prev3",
+				nextEl: ".tst-next3",
+			},
+
+		});
+	};
 })(jQuery);

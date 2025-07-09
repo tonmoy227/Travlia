@@ -1,0 +1,38 @@
+.tv-spon3-title {
+	gap: 18px;
+	white-space: nowrap;
+	@media #{$md,$sm,$xs,$xxs} {
+		white-space: wrap;
+		text-align: center;
+	}
+	i {
+		width: 50%;
+		height: 1px;
+		opacity: .24;
+		background-color: var(--tv-black2);
+	}
+	span {
+		font-size: 22px;
+		font-weight: 600;
+		color: var(--tv-black2);
+		text-transform: capitalize;
+		@media #{$xxs} {
+			line-height: 1.3;
+			font-size: 18px;
+		}
+	}
+}
+.tv-spon3-img {
+	.item-img {
+		height: 52px;
+		display: flex;
+		cursor: pointer;
+		align-items: center;
+		filter: grayscale(1);
+		justify-content: center;
+		transition: all 500ms ease-in-out;
+		&:hover {
+			filter: grayscale(0);
+		}
+	}
+}
