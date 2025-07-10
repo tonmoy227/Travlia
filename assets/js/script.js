@@ -703,7 +703,7 @@ Last change:    00/00/00
 					spaceBetween: 20,
 				},
 				'0': {
-					slidesPerView: 1,
+					slidesPerView: 2,
 				},
 			},
 		});
@@ -803,4 +803,7 @@ Last change:    00/00/00
 
 		});
 	};
+
+
+	
 })(jQuery);

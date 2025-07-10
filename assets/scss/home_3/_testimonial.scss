@@ -109,14 +109,15 @@
 			width: 50%;
 			height: 100%;
 		}
-		&:hover,
-		&:is(.active) {
-			color: #fff;
-			background-color: var(--tv-black2);
-		}
 	}
 	.tst-prev3 {
+		color: #fff;
 		border-top-right-radius: 12px;
+		background-color: var(--tv-black2);
+		&:hover {
+			color: #fff;
+			background-color: var(--tv-base-c2) !important;
+		}
 		@media #{$lg,$md,$sm,$xs,$xxs} {
 			border-top-left-radius: 12px;
 			border-top-right-radius: 0;
@@ -124,5 +125,9 @@
 	}
 	.tst-next3 {
 		border-bottom-right-radius: 12px;
+		&:hover{
+			color: #fff;
+			background-color: var(--tv-black2);
+		}
 	}
 }
