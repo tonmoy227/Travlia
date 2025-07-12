@@ -18,8 +18,29 @@
 		overflow: hidden;
 		border-radius: 8px;
 		margin-bottom: 26px;
+		position: relative;
 		@media #{$xxs} {
 			margin-bottom: 18px;
+		}
+		span {
+			color: #fff;
+			top: 20px;
+			right: 20px;
+			width: 80px;
+			height: 80px;
+			display: flex;
+			line-height: 1.2;
+			overflow: hidden;
+			position: absolute;
+			border-radius: 8px;
+			align-items: center;
+			text-align: center;
+			justify-content: center;
+			text-transform: uppercase;
+			background-color: var(--tv-base-c2);
+			b {
+				max-width: 50px;
+			}
 		}
 	}
 	.item-text {

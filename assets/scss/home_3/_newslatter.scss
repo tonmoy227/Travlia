@@ -82,6 +82,10 @@
 		padding: 18px 28px;
 		color: var(--tv-black2);
 		background-color: var(--tv-base-c1);
+		transition: all 500ms ease-in-out;
+		&:hover {
+			background-color: var(--tv-base-c2);
+		}
 		span {
 			margin-right: 8px;
 		}

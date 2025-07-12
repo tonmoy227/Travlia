@@ -233,7 +233,15 @@
 				content: "\f054";
 				font-weight: 900;
 				position: absolute;
+				transition: all 400ms ease-in-out;
 				font-family: 'Font Awesome 6 Free';
+			}
+			&:hover {
+				color: var(--tv-base-c2);
+				transform: translateX(5px);
+				&:before {
+					color: var(--tv-base-c1);
+				}
 			}
 		}
 	}
@@ -259,7 +267,14 @@
 					font-weight: 900;
 					position: absolute;
 					transform: rotate(-45deg);
+					transition: all 100ms ease-in-out;
 					font-family: 'Font Awesome 6 Free';
+				}
+				&:hover {
+					color: var(--tv-base-c2);
+					&:before {
+						transform: rotate(0deg);
+					}
 				}
 			}
 		}

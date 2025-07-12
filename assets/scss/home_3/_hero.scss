@@ -1,3 +1,32 @@
+@keyframes flying {
+	0% {
+		-webkit-transform: translate(10px, 10px);
+		transform: translate(10px, 10px);
+	}
+	50% {
+		-webkit-transform: translate(-10px, -10px);
+		transform: translate(-10px, -10px);
+	}
+	100% {
+		-webkit-transform: translate(10px, 10px);
+		transform: translate(10px, 10px);
+	}
+}
+@keyframes an-smoke-2 {
+	0% {
+		opacity: .3;
+		-webkit-transform: translateY(0) rotate(0.01deg);
+		transform: translateY(0) rotate(0.01deg);
+	}
+	50% {
+		opacity: .52;
+	}
+	to {
+		opacity: .3;
+		-webkit-transform: translate(20%, 0%) rotate(0.01deg);
+		transform: translate(20%, 0%) rotate(0.01deg);
+	}
+}
 .tv-hero3-sec {
 	z-index: 1;
 	.tv-hr3-bg-shape {
@@ -54,6 +83,9 @@
 		top: 105px;
 		right: 60px;
 		z-index: 4;
+		.item-img {
+			animation: flying 2.5s linear infinite;
+		}
 		@media #{$xl} {
 			right: 0;
 		}
@@ -99,6 +131,9 @@
 		font-size: 64px;
 		font-weight: 700;
 		padding-bottom: 15px;
+		.split-line {
+			overflow: hidden;
+		}
 		@media #{$xxs} {
 			font-size: 50px;
 		}
@@ -266,9 +301,15 @@
 	width: 415px;
 	height: 323px;
 	opacity: 0.52;
+	.tv-cld1 {
+		animation: an-smoke-2 6s ease-in-out infinite;
+		animation-delay: 2s;
+	}
 	.tv-cld2 {
 		top: -10px;
 		right: -10px;
 		position: absolute;
+		animation: an-smoke-2 6s ease-in-out infinite;
+		animation-delay: 4s;
 	}
 }
