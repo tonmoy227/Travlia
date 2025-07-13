@@ -49,6 +49,9 @@
 	.item-text {
 		width: 100%;
 		max-width: 230px;
+		@media #{$xxs} {
+			max-width: 100%;
+		}
 		.tv-rate {
 			font-size: 22px;
 			font-weight: 800;
@@ -111,6 +114,15 @@
 					}
 				}
 			}
+		}
+	}
+}
+.tv-jour-bottom-text {
+	p {
+		color: #0d333d;
+		font-weight: 300;
+		a {
+			font-weight: 600;
 		}
 	}
 }

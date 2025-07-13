@@ -1,5 +1,6 @@
 .tv-feat3-content {
 	z-index: 1;
+	width: 100%;
 	max-width: 935px;
 	@media #{$lg,$md,$sm,$xs,$xxs} {
 		max-width: 100%;

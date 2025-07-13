@@ -951,7 +951,82 @@ if ($('.tv-desti3-slider').length > 0 ) {
 		},
 	});
 };
-
+if ($('.tv-holiday2-slider').length > 0 ) {
+	var slider = new Swiper('.tv-holiday2-slider', {
+		spaceBetween: 18,
+		slidesPerView: 4,
+		loop: true,
+		speed: 1000,
+		navigation: {
+			prevEl: ".holi2-prev3",
+			nextEl: ".holi2-next3",
+		},
+		breakpoints: {
+			'1600': {
+				slidesPerView: 4,
+			},
+			'1400': {
+				slidesPerView: 4,
+			},
+			'1200': {
+				slidesPerView: 3,
+			},
+			'992': {
+				slidesPerView: 3,
+			},
+			'768': {
+				slidesPerView: 2,
+			},
+			'576': {
+				slidesPerView: 1,
+			},
+			'480': {
+				slidesPerView: 1,
+			},
+			'0': {
+				slidesPerView: 1,
+			},
+		},
+	});
+};
+if ($('.tv-team2-slider').length > 0 ) {
+	var slider = new Swiper('.tv-team2-slider', {
+		spaceBetween: 18,
+		slidesPerView: 3,
+		loop: true,
+		speed: 1000,
+		navigation: {
+			prevEl: ".holi2-prev3",
+			nextEl: ".holi2-next3",
+		},
+		breakpoints: {
+			'1600': {
+				slidesPerView: 3,
+			},
+			'1400': {
+				slidesPerView: 3,
+			},
+			'1200': {
+				slidesPerView: 2,
+			},
+			'992': {
+				slidesPerView: 2,
+			},
+			'768': {
+				slidesPerView: 2,
+			},
+			'576': {
+				slidesPerView: 1,
+			},
+			'480': {
+				slidesPerView: 1,
+			},
+			'0': {
+				slidesPerView: 1,
+			},
+		},
+	});
+};
 if ($('.tv-testi3-slider').length > 0 ) {
 	var slider = new Swiper('.tv-testi3-slider', {
 		spaceBetween: 20,
