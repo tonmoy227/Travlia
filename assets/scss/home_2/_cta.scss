@@ -134,6 +134,11 @@
 	@media #{$md,$sm,$xs,$xxs} {
 		width: 100%;
 	}
+	.tv-btn2 a {
+		&:before {
+			background-color: var(--tv-base-c2);
+		}
+	}
 	.tv-sec-title2 {
 		.subtitle {
 			span {
@@ -177,6 +182,7 @@
 		top: 50%;
 		color: #fff;
 		left: -18px;
+		z-index: 2;
 		font-weight: 600;
 		position: absolute;
 		padding: 40px 5px;

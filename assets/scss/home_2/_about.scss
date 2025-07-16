@@ -16,11 +16,18 @@
 		overflow: hidden;
 		border-radius: 15px;
 		display: inline-block;
+		transition: all 1500ms ease-in-out;
+		clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+		&:is(.active) {
+			transition-delay: 500ms;
+			clip-path: polygon(0 100%, 100% 100%, 100% 0, 0 0);
+		}
 	}
 	.item-img2 {
 		bottom: 0;
 		right: -110px;
 		overflow: hidden;
+		max-width: 383px;
 		position: absolute;
 		border-radius: 15px;
 		@media #{$xxs} {

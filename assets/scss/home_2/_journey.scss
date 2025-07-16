@@ -45,6 +45,9 @@
 		max-width: 140px;
 		overflow: hidden;
 		border-radius: 15px;
+		img {
+			transition: all 500ms ease-in-out;
+		}
 	}
 	.item-text {
 		width: 100%;
@@ -106,6 +109,11 @@
 		&:after {
 			height: 60px;
 		}
+		.item-img {
+			img {
+				transform: scale(1.1);
+			}
+		}
 		.item-text {
 			.trip-btn {
 				b {
@@ -123,6 +131,9 @@
 		font-weight: 300;
 		a {
 			font-weight: 600;
+			&:hover {
+				color: var(--tv-base-c2);
+			}
 		}
 	}
 }

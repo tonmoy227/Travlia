@@ -4,6 +4,7 @@
 	max-width: 332px;
 	max-height: 440px;
 	padding-bottom: 35px;
+	transform: translateY(110px);
 	transition: all 500ms ease-in-out;
 	&:before {
 		bottom: 0;
@@ -15,6 +16,7 @@
 		position: absolute;
 		border-radius: 60px;
 		background-color: #ffede7;
+		transition: all 500ms ease-in-out;
 	}
 	.item-social {
 		top: 60%;
@@ -47,8 +49,10 @@
 	.tv-team2-item {
 		max-width: 500px;
 		max-height: 100%;
+		transform: translateY(0px);
 		&:before {
 			height: 100%;
+			transition-delay: 500ms;
 		}
 		.item-social {
 			a {
@@ -71,6 +75,46 @@
 		.item-text {
 			opacity: 1;
 			visibility: visible;
+		}
+	}
+}
+.tv-team2-nav {
+	@media #{$xl,$lg,$md,$sm,$xs,$xxs} {
+		gap: 15px;
+		display: flex;
+		justify-content: center;
+	}
+	.arrow-nav {
+		top: 60%;
+		color: #fff;
+		width: 60px;
+		height: 60px;
+		z-index: 2;
+		position: absolute;
+		border-radius: 100%;
+		background-color: #2d1a15;
+		transform: translateY(-50%);
+		transition: all 500ms ease-in-out;
+		@media #{$xl,$lg,$md,$sm,$xs,$xxs} {
+			position: static;
+			margin-top: 40px;
+			transform: translateY(0%);
+		}
+		&:hover {
+			color: var(--tv-black);
+			background-color: var(--tv-base-c1);
+		}
+	}
+	.team2-prev {
+		left: -8%;
+		@media #{$xxxl,$xxl} {
+			left: -2%;
+		}
+	}
+	.team2-next {
+		right: -8%;
+		@media #{$xxxl,$xxl} {
+			right: -2%;
 		}
 	}
 }
