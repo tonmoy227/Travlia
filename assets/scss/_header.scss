@@ -605,6 +605,7 @@
 				}
 				&.dropdown {
 					.dropdown-menu {
+						top: 53px;
 						background-color: var(--tv-black2);
 						li {
 							a {
@@ -673,6 +674,33 @@
 		}
 		.tv-mobile-menu-btn button span {
 			background-color: #fff;
+		}
+	}
+	&:is(.txa_sticky_header) {
+		position: fixed;
+		width: 100%;
+		top: 0;
+		left: 0;
+		right: 0;
+		transition: 300ms ease-in-out;
+		z-index: 10;
+		&:is(.txa_sticky) {
+			background-color: #fff;
+			&:is(.header_style_three) {
+				background-color: #000;
+			}
+		}
+		&:is(.txa_sticky) {
+			transform: translateY(-150%);
+			&:is(.txa_sticky_show) {
+				transform: translateY(0%);
+			}
+			&:is(.header_style_one) .tv-header-content {
+				padding: 15px 15px;
+			}
+			&:is(.header_style_two) .tv-header-top {
+				display: none;
+			}
 		}
 	}
 }
